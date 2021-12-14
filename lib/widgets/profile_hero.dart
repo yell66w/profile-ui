@@ -28,14 +28,14 @@ class ProfileHero extends StatelessWidget {
             child: Column(
               children: [
                 const Text(
-                  "Ryan  Tillaman",
+                  "Ryan Tillaman",
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 26,
                   ),
                 ),
                 Text(
-                  "Computer Science",
+                  "Computer Science | Software Developer",
                   style: TextStyle(color: Colors.teal[500]),
                 )
               ],

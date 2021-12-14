@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:profile_ui/widgets/favorites.dart';
 import 'package:profile_ui/widgets/skill_box.dart';
+import 'package:profile_ui/widgets/skills.dart';
 
 class ProfileExtras extends StatelessWidget {
   const ProfileExtras({
@@ -21,61 +23,17 @@ class ProfileExtras extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(30, 24, 0, 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                "Skills",
-                style: TextStyle(
-                  color: Colors.white,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Skills(),
+                SizedBox(
+                  height: 24,
                 ),
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: const [
-                    SkillBox(
-                      name: "React",
-                      icon: FaIcon(
-                        FontAwesomeIcons.react,
-                        color: Colors.lightBlue,
-                      ),
-                    ),
-                    SkillBox(
-                      name: "Javascript",
-                      icon: FaIcon(
-                        FontAwesomeIcons.js,
-                        color: Colors.yellow,
-                      ),
-                    ),
-                    SkillBox(
-                      name: "Node JS",
-                      icon: FaIcon(
-                        FontAwesomeIcons.nodeJs,
-                        color: Colors.green,
-                      ),
-                    ),
-                    SkillBox(
-                      name: "SQL",
-                      icon: FaIcon(
-                        FontAwesomeIcons.database,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    SkillBox(
-                      name: "Git",
-                      icon: FaIcon(
-                        FontAwesomeIcons.git,
-                        color: Colors.orange,
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
+                Favorites()
+              ],
+            ),
           ),
         ),
       ),
