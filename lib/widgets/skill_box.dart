@@ -16,27 +16,37 @@ class SkillBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 80,
-      width: 80,
-      margin: const EdgeInsets.only(right: 15),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: const Color(0xff4A4355),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          icon,
-          const SizedBox(
-            height: 6,
-          ),
-          Text(
-            name,
-            style: TextStyle(color: Colors.grey[400], fontSize: 12),
-          )
-        ],
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20.0),
+      child: Container(
+        height: 80,
+        width: 80,
+        margin: const EdgeInsets.only(right: 15, bottom: 6),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: const Color(0xff4A4355),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0xff2C2535),
+              offset: Offset(5, 5.0),
+              blurRadius: 6.0,
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            icon,
+            const SizedBox(
+              height: 6,
+            ),
+            Text(
+              name,
+              style: TextStyle(color: Colors.grey[400], fontSize: 12),
+            )
+          ],
+        ),
       ),
     );
   }

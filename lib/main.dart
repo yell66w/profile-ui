@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:profile_ui/widgets/profile_extras.dart';
 import 'package:profile_ui/widgets/profile_hero.dart';
 
@@ -18,7 +19,20 @@ class Profile extends StatelessWidget {
       title: "Profile",
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Profile"),
+          title: const FaIcon(
+            FontAwesomeIcons.chevronLeft,
+            size: 18,
+          ),
+          actions: const [
+            Padding(
+              padding: EdgeInsets.all(18.0),
+              child: FaIcon(
+                FontAwesomeIcons.ellipsisV,
+                size: 18,
+              ),
+            )
+          ],
+          foregroundColor: Colors.grey[800],
           backgroundColor: Colors.white,
           elevation: 0,
         ),
@@ -26,6 +40,9 @@ class Profile extends StatelessWidget {
           color: Colors.white,
           child: Column(
             children: const [
+              SizedBox(
+                height: 12,
+              ),
               ProfileHero(),
               SizedBox(
                 height: 12,
