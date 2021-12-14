@@ -25,12 +25,12 @@ class Favorites extends StatelessWidget {
         Column(
           children: const [
             FavoriteBox(
-              title: "ANIME",
-              favorite: "Sword Art Online",
-            ),
-            FavoriteBox(
               title: "COLOR",
               favorite: "Yellow",
+            ),
+            FavoriteBox(
+              title: "ANIME",
+              favorite: "One Piece",
             ),
             FavoriteBox(
               title: "LANGUAGE",

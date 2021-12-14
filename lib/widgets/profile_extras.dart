@@ -22,11 +22,14 @@ class ProfileExtras extends StatelessWidget {
         ),
         width: MediaQuery.of(context).size.width,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(30, 24, 0, 24),
+          padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
+                SizedBox(
+                  height: 24,
+                ),
                 Skills(),
                 SizedBox(
                   height: 24,
